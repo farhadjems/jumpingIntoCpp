@@ -1,4 +1,4 @@
-#include <iostream> // this the header command - by commenting this, all of the commands related to this header will not work like "cout"
+#include <iostream> // this the header command - by commenting this, all of the commands related to this header will not work like "std::cout"
 
 using namespace std; // by commenting this command, we have to use the full name of functions like std::cout
 
