@@ -68,7 +68,7 @@ void startProgram(int menuKey) // this function executes the function chosen by 
     switch (menuKey)
     {
     case 1:
-        bottleSong();
+        bottleSong(); 
         break;
     case 2:
         calculator();
