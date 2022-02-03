@@ -1,0 +1,1 @@
+// some kind of structure which does an exact job for definite condition or number of times
