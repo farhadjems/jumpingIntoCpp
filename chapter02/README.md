@@ -1,4 +1,4 @@
-Chapter 2 Practice problems
+Chapter 02 Practice problems
 
 1. Write a program that prints out your name.
 
