@@ -1,4 +1,4 @@
-Chapetr 03 Practice problems
+Chapter 03 Practice problems
 
 1. Write a program that outputs your name.
 
