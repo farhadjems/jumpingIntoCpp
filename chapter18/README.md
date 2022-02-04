@@ -1,0 +1,5 @@
+Chapter 18 Practice problems
+
+1. Implement a small address book program that allows users to enter names and email addresses, remove or change entries, and list the entries in their address book. Don’t worry about saving the address book to disk; it’s ok to lose the data when the program exits.
+
+2. Use vectors to implement a high score list for a video game. Make it so that scores are updated automatically, and new scores are added into the right place in the list. You may find the SGI website listed above useful for finding more operations you can do on vectors. Write a program with two options: register user and log in. Register user allows a new user to create a login name and password. Log in allows a user to log in and access a second area, with options for “change password” and “log out”. Change password allows the user to change the password, and log out will return the user to the original screen.
