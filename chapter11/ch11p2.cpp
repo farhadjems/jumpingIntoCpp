@@ -44,9 +44,6 @@ int main()
         }
         time ++;
     }
-    
-
-
 }
 
 spaceShip getSpaceShipData()
