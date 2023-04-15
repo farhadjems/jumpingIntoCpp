@@ -3,9 +3,9 @@
 
 using namespace std;
 
-bool isInfoCorrect(string username,string password) // this functions checks if the user and pass are correct
+bool isInfoCorrect(string username, string password) // this functions checks if the user and pass are correct
 {
-    if (username == "im.farhad" && password == "1234") 
+    if (username == "im.farhad" && password == "1234")
     {
         return true;
     }
@@ -27,13 +27,13 @@ int main() // main program
 
         cout << "enter the password: ";
         cin >> password;
-        
-        if ( isInfoCorrect(userame,password))
+
+        if (isInfoCorrect(userame, password))
         {
             cout << " Access Granted!\n";
             break;
         }
-        else 
+        else
         {
             cout << " the inserted username or password is wrong! try again\n";
         }
