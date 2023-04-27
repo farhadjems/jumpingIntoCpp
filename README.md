@@ -1,2 +1,2 @@
 # jumpingIntoCpp
-exercises of book "jumping into C++" is solved.
+These are my soultions to the practice problems declared in the book "Jumping into C++" by Alex Allain
