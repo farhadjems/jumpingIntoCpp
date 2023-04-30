@@ -4,85 +4,60 @@
 using namespace std;
 
 enum menu
-{   
-    addItem = 1, changeItem = 2, listItem = 3, finishProgram = 4,
+{
+    finishProgram = 0,
+    addItem = 1,
+    changeItem = 2,
+    listItem = 3,
+
 };
 
-map<string,string> addressBook;
 menu showMenu(menu menuKey);
 void runProgram(menu menuKey);
-void addItemToMap();
-void changeItemOfMap();
-void listItemOfMap();
+void addItemToMap(map<string, string> &addressBook);
+void changeItemOfMap(map<string, string> &addressBook);
+void listItemOfMap(map<string, string> &addressBook);
 
 int main()
 {
-    menu menuKey = finishProgram;
-
-    cout << " This is an address book program\n";
-    do
+    map<string, string> addressBook;
+    cout << "This is an address book program\n";
+    int key = 1;
+    while (key)
     {
-        menuKey = showMenu(menuKey);
-        runProgram(menuKey);
-    } while (menuKey != finishProgram);
-}
-
-menu showMenu(menu menuKey)
-{
-    int key = 4;
-    while (true)
-    {
-        cout << " choose one the below options:\n1- add new address\n2- change address\n3- print the address list\n4- quit\n";
+        cout << "choose one the below options:" << endl
+             << "1. add new address" << endl
+             << "2. change address" << endl
+             << "3. print the address list" << endl
+             << "0. finish program" << endl;
         cin >> key;
-        if (key < 5 && key > 0)
+
+        switch (key)
         {
+        case finishProgram:
+            break;
+            break;
+
+        case addItem:
+            addItemToMap(addressBook);
+            break;
+
+        case changeItem:
+            changeItemOfMap(addressBook);
+            break;
+
+        case listItem:
+            listItemOfMap(addressBook);
+            break;
+
+        default:
+            cout << "Please Choose one of the existing options in the menu" << endl;
             break;
         }
     }
-    switch (key)
-    {
-    case 1:
-        menuKey = addItem;
-        break;
-    
-    case 2:
-        menuKey = changeItem;
-        break;
-
-    case 3:
-        menuKey = listItem;
-        break;
-
-    case 4:
-        menuKey = finishProgram;
-        break;
-    }
-    return menuKey;
 }
 
-void runProgram(menu menuKey)
-{
-    switch (menuKey)
-    {
-    case addItem:
-        addItemToMap();
-        break;
-    
-    case changeItem:
-        changeItemOfMap();
-        break;
-    
-    case listItem: 
-        listItemOfMap();
-        break;
-    
-    case finishProgram:
-        return;
-        break;
-    }
-}
-
-void addItemToMap()
+void addItemToMap(map<string, string> &addressBook)
 {
     cout << " Enter the name: ";
     string name;
@@ -95,13 +70,13 @@ void addItemToMap()
     addressBook[name] = email;
 }
 
-void changeItemOfMap()
+void changeItemOfMap(map<string, string> &addressBook)
 {
     cout << " enter the name: ";
     string name = "";
     getline(cin, name, '\t');
 
-    map<string,string>::iterator itr = addressBook.find(name);
+    map<string, string>::iterator itr = addressBook.find(name);
 
     if (itr != addressBook.end())
     {
@@ -114,14 +89,10 @@ void changeItemOfMap()
     }
 }
 
-void listItemOfMap()
+void listItemOfMap(map<string, string> &addressBook)
 {
-    for (map<string,string>::iterator itr = addressBook.begin(), end = addressBook.end(); itr != end; ++itr)
+    for (map<string, string>::iterator itr = addressBook.begin(), end = addressBook.end(); itr != end; ++itr)
     {
         cout << "name: " << itr->first << '\t' << "address: " << itr->second << endl;
     }
 }
-
-
-
-
