@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main ()
+int main()
 {
-    cout << " hello my name is farhad,\n kimia is my wife,\n ali is my friend\n sina is my friend too!\n"; // "\n" is the character that works like pressing enter
+    cout << " Hi my name is Farhad,\n kimia is my wife,\n  and Sina is my friend!\n"; // "\n" is the character that works like pressing enter
 }
